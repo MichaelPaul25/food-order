@@ -210,8 +210,12 @@ if (isset($_GET['id'])) {
                         }
                     }
                 }
+                else
+                {
+                    $image_name = $current_image; //Default image when image is not selected
+                }
             } else {
-                $image_name = $current_image;
+                $image_name = $current_image; //Default image when iamge not selected
             }
             //4.Update the food in database
             $sql3 = "UPDATE tbl_food SET
